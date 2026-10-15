@@ -6,7 +6,7 @@
 */
 
 // Replace this with your Formspree form ID.
-const FORMSPREE_FORM_ID = "https://formspree.io/f/xdeayeaq";
+const FORMSPREE_FORM_ID = "xdeayeaq";
 
 const form = document.getElementById("modForm");
 const statusBox = document.getElementById("status");
