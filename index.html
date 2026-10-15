@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Apply to help moderate the RSSI Labs Discord community.">
+  <meta name="color-scheme" content="dark">
+  <title>Moderator Application | RSSI Labs</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><div class="mark" aria-hidden="true">R</div><div><div class="brand">RSSI LABS</div><div class="subbrand">COMMUNITY OPERATIONS</div></div><span class="tag">APPLICATIONS</span></header>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">DISCORD COMMUNITY · VOLUNTEER TEAM</p>
+      <h1 id="page-title">Moderator application</h1>
+      <p>We welcome applications from anyone interested in helping the RSSI Labs community. You don't need technical expertise to be an excellent community moderator. We're looking for sound judgment, patience, reliability, and a willingness to learn.</p>
+      <div class="info"><strong>How selection works</strong><span>Applications are reviewed manually. Applying does not grant permissions or guarantee selection. Shortlisted applicants may be contacted on Discord for a follow-up conversation.</span></div>
+    </section>
+    <form id="modForm" novalidate>
+      <section class="panel"><h2><span class="num">01</span> About you</h2>
+        <div class="field"><label for="discord">Discord username <span class="required">*</span></label><input id="discord" name="discord_username" required maxlength="80" autocomplete="off" placeholder="Your Discord username"><small>Use the username we can search for on Discord. Never send your password or login code.</small></div>
+        <fieldset><legend>Are you already in the RSSI Labs server? <span class="required">*</span></legend><div class="choices inline"><label><input type="radio" name="server_member" value="Yes" required> Yes</label><label><input type="radio" name="server_member" value="No"> No</label></div></fieldset>
+        <div class="field"><label for="timezone">Time zone (optional)</label><input id="timezone" name="timezone" maxlength="60" placeholder="e.g., US Eastern"></div>
+        <div class="field"><label for="availability">Typical weekly availability <span class="required">*</span></label><select id="availability" name="weekly_availability" required><option value="">Select one</option><option>1–3 hours</option><option>4–7 hours</option><option>8–14 hours</option><option>15+ hours</option><option>Variable / depends on schedule</option></select></div>
+      </section>
+      <section class="panel"><h2><span class="num">02</span> Your moderator focus</h2>
+        <div class="field"><label for="primary">Primary role you're interested in <span class="required">*</span></label><select id="primary" name="primary_role" required><option value="">Choose your strongest fit</option><option value="Community / conduct">Community / conduct — chat, rules, discipline</option><option value="Technical support">Technical support — troubleshooting</option><option value="Programming">Programming — code and debugging</option><option value="Cybersecurity / RF">Cybersecurity / RF — lawful labs and safety</option><option value="Mentor / educator">Mentor / educator — teaching and guidance</option></select></div>
+        <fieldset><legend>Other areas you could support (optional)</legend><div class="choices grid-choices"><label><input type="checkbox" name="secondary_roles" value="Community / conduct"> Community / conduct</label><label><input type="checkbox" name="secondary_roles" value="Technical support"> Technical support</label><label><input type="checkbox" name="secondary_roles" value="Programming"> Programming</label><label><input type="checkbox" name="secondary_roles" value="Cybersecurity / RF"> Cybersecurity / RF</label><label><input type="checkbox" name="secondary_roles" value="Mentor / educator"> Mentor / educator</label></div></fieldset>
+        <div class="field"><label for="experience">Relevant experience or skills</label><textarea id="experience" name="experience" rows="4" maxlength="2000" placeholder="Discord moderation, programming languages, homelab projects, RF, mentoring, etc. It's okay to be new."></textarea></div>
+        <div class="field"><label for="motivation">Why do you want to help moderate RSSI Labs? <span class="required">*</span></label><textarea id="motivation" name="motivation" rows="4" required minlength="30" maxlength="2000" placeholder="Tell us what motivates you and what kind of community you want to help build."></textarea></div>
+      </section>
+      <section class="panel"><h2><span class="num">03</span> Judgment scenarios</h2><p class="section-note">There aren't trick answers. We care about your reasoning and how you'd treat members fairly.</p>
+        <div class="field"><label for="conflict">Two members are arguing in general chat. One is your friend. What do you do? <span class="required">*</span></label><textarea id="conflict" name="scenario_conflict" rows="4" required minlength="40" maxlength="2000" placeholder="Walk through your response, from first action to resolution."></textarea></div>
+        <div class="field"><label for="security">Someone shares a potentially harmful cybersecurity script and says it's only for education. How would you handle it? <span class="required">*</span></label><textarea id="security" name="scenario_security" rows="4" required minlength="40" maxlength="2000" placeholder="Consider context, authorization, server rules, and escalation."></textarea></div>
+        <div class="field"><label for="escalation">When would you warn, time out, remove content, ban, or ask an administrator for help? <span class="required">*</span></label><textarea id="escalation" name="scenario_escalation" rows="4" required minlength="40" maxlength="2000" placeholder="Explain how you weigh severity, repeated behavior, and immediate safety."></textarea></div>
+        <div class="field"><label for="specialty">How would you help a member who asks a question you don't know the answer to?</label><textarea id="specialty" name="scenario_unknown_answer" rows="3" maxlength="1500" placeholder="Tell us how you would find reliable information or hand off to someone else."></textarea></div>
+      </section>
+      <section class="panel"><h2><span class="num">04</span> Expectations and privacy</h2>
+        <div class="info muted"><strong>Privacy notice</strong><span>Your answers will be sent to the RSSI Labs application inbox through Formspree and reviewed only for selecting and contacting potential moderators. Do not include secrets or sensitive personal information. Contact server administrators to request deletion of your application. The server owner must establish a retention period and update this notice before accepting real applications.</span></div>
+        <label class="consent"><input type="checkbox" name="conduct_acknowledgment" value="Agreed" required><span>I agree to respect members' privacy, enforce rules fairly, avoid abusing permissions, and escalate situations beyond my authority. <span class="required">*</span></span></label>
+        <label class="consent"><input type="checkbox" name="privacy_acknowledgment" value="Agreed" required><span>I understand my submitted answers will be processed for moderator selection and may be used to contact me on Discord. <span class="required">*</span></span></label>
+        <div class="trap" aria-hidden="true"><label for="company_website">Leave this field empty</label><input id="company_website" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+        <div id="status" role="status" aria-live="polite" class="status" hidden></div>
+        <button type="submit" id="submitButton">Submit application <span aria-hidden="true">→</span></button>
+        <p class="footer-note">Applications are reviewed by people, not automatically approved. No Discord permissions are assigned by this form.</p>
+      </section>
+    </form>
+    <footer>RSSI LABS <span>Independent by design.</span></footer>
+  </main>
+</body>
+</html>
